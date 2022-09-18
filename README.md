@@ -5,7 +5,7 @@
 <h1 align=center> WEB para encontrar mascotas perdidas </h1>
 
 
-![Logo](https://github.com/Dev-Joshua/PetLost-Frontend/Frontend/assets/logo.png)
+![Logo](https://github.com/Dev-Joshua/PetLost-Frontend/main/Frontend/assets/logo.png)
 
 <h1 align=center> 🛠 Technologies </h1>
 <hr/>
