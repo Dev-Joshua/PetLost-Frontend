@@ -14,7 +14,7 @@ Javascript, HTML, CSS, MySQL, JAVA
 
 ## Documentation
 
-[Documentation](https://github.com/onfevs/PetLost/tree/main/Documentacion)
+[Documentation](https://github.com/Dev-Joshua/PetLost-Frontend/blob/main/Frontend/assets/icon/logo.png)
 
 ## Authors
 
