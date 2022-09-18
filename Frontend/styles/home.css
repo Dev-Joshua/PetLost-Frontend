@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --label: #D6CAF8;
+  --black: #000000;
+  --header: #0D1122;
+  --fondo-container: #1e1e1eb5;
+  --letter: #CBF4F7;
+  --white: #ffff;
+  --button: #524388;
+  --hover:#00eeff80;
+  /* --sm: 14px;
+  --md: 16px;
+  --lg: 20px; */
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  /* background-color: var(--header); */
+}
+
+header img {
+  width: 250px;
+  margin: 10px;
+}
+
+.profile-image {
+  margin-top: 8px;
+  margin-right: 50px;
+}
+.profile-image img {
+    width: 75px;
+}
+
+.nav{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height:120px;
+  margin: 10px 50px;
+}
+
+.nav .logo{
+  margin-top: 35px;
+}
+
+.container-list{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-left: 55vh;
+}
+  
+.container-list ul{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+  
+.container-list ul li{
+  list-style-type: none;
+}
+
+.container-list ul li a{
+  color: var(--button);
+  text-decoration: none;
+  font-size: 25px;
+}
+.container-list ul li a:hover{
+  color: var(--letter);
+  text-decoration-line: underline;
+  font-weight: bold;
+}
+  
+.container-account{
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container-account ul{
+  display: none;
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  width: 200px;
+  text-align: right;
+  margin: 25px 0px -192px 60px;
+  background-color: var(--button);
+  color: var(--letter);
+  font-size: 20px;
+}
+
+.container-account:hover{
+  background-color: var(--button);
+  width: 200px;
+}
+
+.container-account:hover ul{
+  display: block;
+  text-align: center;
+}
+
+.container-account li {
+  margin: 16px 0;
+}
+
+.container-account li a{
+  color: #ffffff;
+  text-decoration: none;
+  
+}
+
+.container-account li a:hover{
+  text-decoration: underline;
+}
+
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* color: var(--label); */
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+
+button {
+  background-color: transparent;
+  border-radius: 8px;
+  height: 55px;
+  font-size: 25px;
+  padding: 8px;
+  margin-top: 130px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--letter);
+}
+
+button a {
+  text-decoration: none;
+  color: var(--letter);
+}
+
+button:hover, a:hover {
+  text-decoration: underline;
+  color: #D6CAF8;
+}
+
+body{
+  background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/img/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.filtro-add{
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
+  width: 500px;
+  height: 50px;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+select{
+  border-radius: 5px;
+  border: none;
+  background-color:var(--label);
+}
+
+.ad-container label{
+  cursor: pointer;
+}
+
+.ad-container a{
+  text-decoration: none;
+}
+.ad-container a:hover {
+  color: var(--letter);
+}
+
+
+.cards-ads{
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+  grid-template-rows: minmax(250px, auto);
+  padding: 90px;
+  grid-auto-flow: dense;
+  justify-items: center;
+  margin: 50px 0px;
+  gap: 10px;
+}
+
+.cards-ads .card-pet{
+  /* background-image: url(../assets/img/foto_fondo3.jpg); */
+  box-shadow: rgb(17, 17, 17) 5px 10px 10px;
+  /* width: 200px;
+  height: 250px; */
+  display: grid;
+  cursor: pointer;
+  transition: 350ms all;
+  position: relative;
+  height: 440px;
+}
+
+.cards-ads .card-pet:hover{
+  grid-column: span 1;
+  grid-row: span 2;
+  transition: 350ms all;
+  height: 500px;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card-body{
+  background: linear-gradient(to top, rgba(0, 0, 25, 2.9) 0%, rgba(0, 0, 0, 0) 100%);
+  /* background-color: #d6caf89d; */
+  font-size: 16px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  color: white;
+}
+
+.card-body h3{
+  font-size: 35px;
+  color: var(--texto);
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  z-index: 1;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body p{
+  font-size: 18;
+  color: var(--texto);
+  padding-bottom: 1px;
+  line-height: 25px;
+  margin: 10px 0px 20px 0px;
+}
+
+.card-body:hover {
+  opacity: 1;
+}
+
+/* .card-ads:nth-child(2) {
+  grid-column: span 3;
+  grid-row: 2px;
+} */
+
+table{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+/* Tables de description */
+thead{
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+tbody{
+  margin-top: 40px;
+  height: 100px;
+  padding: 10px;
+}
+
+td{
+  color: var(--letter);
+  line-height: 25px;
+  font-weight: bold;
+}
+
+
+tr{
+  margin-bottom: 5px;
+}
+
+
+.container-ul ul {
+  display: none;
+  padding: 0px;
+  position: absolute;
+  margin: 85px 0px 0px 195px;
+  font-size: 20px; 
+}
+
+.container-ul:hover{
+  background-color: transparent;
+}
+
+.container-ul:hover ul{
+  display: block;
+  text-align: center;
+}
+/* .container-ul ul:hover {
+  opacity: 1;
+} */
+
+.container-ul ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.container-ul ul li a {
+  display: block;
+  color: var(--texto);
+  font-size: 20px;
+  padding: 10px;
+  transition: all 0.5s linear;
+}
+
+.container-ul ul li:hover a {
+  transform: translateY(-10px);
+  color: var(--label);
+}
+
