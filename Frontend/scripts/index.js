@@ -5,7 +5,7 @@ async function login(evt){
     const form = evt.target;
     let user = {
         email: form.email.value,
-        password: document.getElementById("password").value
+        password: form.password.value
     }
 
     console.log(user);

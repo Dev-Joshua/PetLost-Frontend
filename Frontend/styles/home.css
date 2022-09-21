@@ -8,22 +8,29 @@
   --letter: #CBF4F7;
   --white: #ffff;
   --button: #524388;
-  --hover:#00eeff80;
+  --hover: #00eeff80;
   /* --sm: 14px;
   --md: 16px;
   --lg: 20px; */
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
 
+body {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 header {
-  width: 100%;
-  height: 120px;
-  /* background-color: var(--header); */
+  position: relative;
+  top: 0;
 }
 
 header img {
@@ -35,78 +42,84 @@ header img {
   margin-top: 8px;
   margin-right: 50px;
 }
+
 .profile-image img {
-    width: 75px;
+  width: 75px;
 }
 
-.nav{
+.nav {
   display: flex;
   align-content: center;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  height:120px;
-  margin: 10px 50px;
+  height: 120px;
+  margin: 30px 50px 0px 50px;
 }
 
-.nav .logo{
+.nav .logo {
   margin-top: 35px;
 }
 
-.container-list{
+.container-list {
   display: flex;
   align-items: center;
   text-transform: uppercase;
   font-size: 20px;
   margin-left: 55vh;
 }
-  
-.container-list ul{
+
+.container-list ul {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  font-weight: bold;
 }
-  
-.container-list ul li{
+
+.container-list ul li {
   list-style-type: none;
 }
 
-.container-list ul li a{
-  color: var(--button);
+.container-list ul li a {
+  color: var(--label);
   text-decoration: none;
   font-size: 25px;
 }
-.container-list ul li a:hover{
-  color: var(--letter);
+
+.container-list ul li a:hover {
+  /* color: var(--letter); */
   text-decoration-line: underline;
   font-weight: bold;
+  /* background-color: var(--button);
+  border-radius: 10px; */
 }
-  
-.container-account{
+
+.container-account {
   align-items: center;
   display: flex;
   flex-direction: row-reverse;
 }
 
-.container-account ul{
+.container-account ul {
   display: none;
   list-style: none;
   padding: 0px;
   position: absolute;
   width: 200px;
-  text-align: right;
+  text-align: center;
   margin: 25px 0px -192px 60px;
   background-color: var(--button);
   color: var(--letter);
   font-size: 20px;
+  border-radius: 20px;
 }
 
-.container-account:hover{
+.container-account:hover {
   background-color: var(--button);
   width: 200px;
 }
 
-.container-account:hover ul{
+.container-account:hover ul {
   display: block;
   text-align: center;
 }
@@ -115,22 +128,21 @@ header img {
   margin: 16px 0;
 }
 
-.container-account li a{
+.container-account li a {
   color: #ffffff;
   text-decoration: none;
-  
+
 }
 
-.container-account li a:hover{
+.container-account li a:hover {
   text-decoration: underline;
 }
 
 
 label {
   font-weight: bold;
-  margin-bottom: 10px;
-  /* color: var(--label); */
-  font-size: 20px;
+  color: var(--label);
+  font-size: 25px;
   text-align: center;
   margin-right: 15px;
 }
@@ -159,21 +171,14 @@ button a {
   color: var(--letter);
 }
 
-button:hover, a:hover {
+button:hover,
+a:hover {
   text-decoration: underline;
   color: #D6CAF8;
 }
 
-body{
-  background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/img/fondo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: auto;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
-.filtro-add{
+.filtro-add {
   display: flex;
   align-content: center;
   align-items: flex-end;
@@ -184,25 +189,26 @@ body{
   margin-left: 100px;
 }
 
-select{
+select {
   border-radius: 5px;
   border: none;
-  background-color:var(--label);
+  background-color: var(--label);
 }
 
-.ad-container label{
+.ad-container label {
   cursor: pointer;
 }
 
-.ad-container a{
+.ad-container a {
   text-decoration: none;
 }
+
 .ad-container a:hover {
   color: var(--letter);
 }
 
 
-.cards-ads{
+.cards-ads {
   position: relative;
   max-width: 100%;
   display: grid;
@@ -211,45 +217,36 @@ select{
   padding: 90px;
   grid-auto-flow: dense;
   justify-items: center;
-  margin: 40px 0px;
+  margin: 50px 0px;
   gap: 10px;
 }
 
-.cards-ads .card-pet{
-  /* background-image: url(../assets/img/foto_fondo3.jpg); */
+.cards-ads .card-pet {
   box-shadow: rgb(17, 17, 17) 5px 10px 10px;
-  /* width: 200px;
-  height: 250px; */
   display: grid;
   cursor: pointer;
   transition: 350ms all;
   position: relative;
   height: 440px;
-  margin-top: 10px;
 }
 
-.card-pet{
-  height: 500px;
-}
-
-.cards-ads .card-pet:hover{
+/* .cards-ads .card-pet:hover {
   grid-column: span 1;
   grid-row: span 2;
   transition: 350ms all;
   height: 500px;
-}
+} */
 
-.image img{
-  max-height:500px;
+.image img {
   width: 100%;
-  height:100%;
-  object-fit:cover;
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
+  border-radius: 30px 10px 30px 10px;
 }
 
-.card-body{
+.card-body {
   background: linear-gradient(to top, rgba(0, 0, 25, 2.9) 0%, rgba(0, 0, 0, 0) 100%);
-  /* background-color: #d6caf89d; */
   font-size: 16px;
   opacity: 0;
   transition: 450ms opacity;
@@ -265,7 +262,7 @@ select{
   color: white;
 }
 
-.card-body h3{
+.card-body h3 {
   font-size: 35px;
   color: var(--texto);
   font-weight: 700;
@@ -283,7 +280,7 @@ select{
   align-items: center;
 }
 
-.card-body p{
+.card-body p {
   font-size: 18;
   color: var(--texto);
   padding-bottom: 1px;
@@ -295,12 +292,7 @@ select{
   opacity: 1;
 }
 
-/* .card-ads:nth-child(2) {
-  grid-column: span 3;
-  grid-row: 2px;
-} */
-
-table{
+table {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -309,8 +301,9 @@ table{
   justify-content: center;
   align-items: center;
 }
+
 /* Tables de description */
-thead{
+thead {
   text-decoration: underline;
   text-transform: uppercase;
   color: var(--white);
@@ -318,40 +311,39 @@ thead{
   letter-spacing: 2px;
 }
 
-tbody{
+tbody {
   margin-top: 40px;
   height: 100px;
   padding: 10px;
 }
 
-td{
+td {
   color: var(--letter);
   line-height: 25px;
   font-weight: bold;
 }
 
-
-tr{
+tr {
   margin-bottom: 5px;
 }
-
 
 .container-ul ul {
   display: none;
   padding: 0px;
   position: absolute;
   margin: 85px 0px 0px 195px;
-  font-size: 20px; 
+  font-size: 20px;
 }
 
-.container-ul:hover{
+.container-ul:hover {
   background-color: transparent;
 }
 
-.container-ul:hover ul{
+.container-ul:hover ul {
   display: block;
   text-align: center;
 }
+
 /* .container-ul ul:hover {
   opacity: 1;
 } */
@@ -373,4 +365,3 @@ tr{
   transform: translateY(-10px);
   color: var(--label);
 }
-
