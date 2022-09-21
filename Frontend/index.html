@@ -23,13 +23,13 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.. lorem</p>
     </section>
     <section class="login">
-      <form>
+      <form onsubmit="login(event)">
         <label for="">Email</label>
-        <input type="email" placeholder="yourUser@example.com" />
+        <input name="email" type="email" placeholder="yourUser@example.com" />
         <label for="">Contraseña</label>
-        <input type="password" placeholder="*************" />
-        <button>
-          <a href="./html/home.html">Iniciar sesión</a>
+        <input name="password" type="password" placeholder="*************" id="password"/>
+        <button type="submit">
+          <a href="#">Iniciar sesión</a>
         </button>
         <!-- <input class="button" type="submit" value="Iniciar sesíon"> -->
         <h3>¿No tienes una cuenta aun?</h3>
@@ -41,7 +41,7 @@
     </section>
   </section>
   <!-- <img class="background-image" src="./assets/img/foto_fondo1.jpg" width="300px" height="200px" alt="imagen-fondo"> -->
-  <script src="./scripts/main.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>

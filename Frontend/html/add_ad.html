@@ -46,17 +46,17 @@
       <div class="title">
         <h2>Nuevo anuncio</h2>
       </div>
-      <form class="formulario">
+      <form class="formulario" enctype="multipart/form-data" onsubmit="createPet(event)">
         <div class="file1-container">
           <label for="name">Mascota:</label>
-          <input type="varchar">
+          <input type="varchar" name="name">
           <label for="location">Fecha de perdida:</label>
-          <input type="date">
+          <input type="date" name="dateLost">
         </div>
         <label for="location">Hora de perdida:</label>
         <input type="time">
         <label for="location">Lugar de perdida:</label>
-        <input type="varchar">
+        <input type="varchar" name="placeLost">
         <label for="descripcion">Descripción del anuncio:</label>
         <input type="text">
         <div class="input-file" id="src-file">
@@ -64,11 +64,12 @@
           <div>
             <!-- <img src="../assets/icon/add-img.png" width="80px" height="80px" alt=""> -->
           </div>
-          <input accept="image/*" type="file">
+          <input name="photo" accept="image/*" type="file">
         </div>
         <button type="submit">Crear Anuncio</button>
       </form>
     </section>
   </main>
+  <script src="../scripts/add_add.js"></script>
 </body>
 </html>
