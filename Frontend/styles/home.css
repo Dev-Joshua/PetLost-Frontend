@@ -25,6 +25,12 @@ header {
   height: 120px;
   /* background-color: var(--header); */
 }
+body{
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 header img {
   width: 250px;
@@ -65,6 +71,7 @@ header img {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  font-weight: bold;
 }
   
 .container-list ul li{
@@ -72,7 +79,7 @@ header img {
 }
 
 .container-list ul li a{
-  color: var(--button);
+  color: var(--label);
   text-decoration: none;
   font-size: 25px;
 }
@@ -94,11 +101,12 @@ header img {
   padding: 0px;
   position: absolute;
   width: 200px;
-  text-align: right;
+  text-align: center;
   margin: 25px 0px -192px 60px;
   background-color: var(--button);
   color: var(--letter);
   font-size: 20px;
+  border-radius: 20px;
 }
 
 .container-account:hover{
@@ -129,8 +137,8 @@ header img {
 label {
   font-weight: bold;
   margin-bottom: 10px;
-  /* color: var(--label); */
-  font-size: 20px;
+  color: var(--label);
+  font-size: 25px;
   text-align: center;
   margin-right: 15px;
 }
@@ -164,15 +172,6 @@ button:hover, a:hover {
   color: #D6CAF8;
 }
 
-body{
-  background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/img/fondo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: auto;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .filtro-add{
   display: flex;
   align-content: center;
@@ -197,7 +196,7 @@ select{
 .ad-container a{
   text-decoration: none;
 }
-.ad-container a:hover {
+.ad-container a label:hover {
   color: var(--letter);
 }
 
@@ -212,7 +211,7 @@ select{
   grid-auto-flow: dense;
   justify-items: center;
   margin: 50px 0px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .cards-ads .card-pet{
@@ -222,23 +221,27 @@ select{
   height: 250px; */
   display: grid;
   cursor: pointer;
-  transition: 350ms all;
+  /* transition: 50ms all; */
   position: relative;
-  height: 440px;
+  height: 500px;
 }
 
 .cards-ads .card-pet:hover{
-  grid-column: span 1;
-  grid-row: span 2;
-  transition: 350ms all;
+  transform: scale(1.1);
+  margin: 20px;
+}
+
+.image {
   height: 500px;
+  width: 500px;
+  
 }
 
 .image img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  overflow: hidden;
+  overflow:hidden;
 }
 
 .card-body{
@@ -246,7 +249,7 @@ select{
   /* background-color: #d6caf89d; */
   font-size: 16px;
   opacity: 0;
-  transition: 450ms opacity;
+  transition: 150ms opacity;
   padding: 10px;
   position: absolute;
   top: 0;

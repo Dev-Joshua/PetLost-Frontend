@@ -20,6 +20,12 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+body {
+  background-image: linear-gradient( 0deg, rgb(0 0 0 / 57%), rgb(0 0 0 / 0%) ), url(../assets/img/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 header {
   width: 100%;
   height: 120px;
@@ -65,6 +71,7 @@ header img {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  font-weight: bold;
 }
   
 .container-list ul li{
@@ -72,7 +79,7 @@ header img {
 }
 
 .container-list ul li a{
-  color: var(--button);
+  color: var(--label);
   text-decoration: none;
   font-size: 25px;
 }
@@ -94,11 +101,12 @@ header img {
   padding: 0px;
   position: absolute;
   width: 200px;
-  text-align: right;
+  text-align: center;
   margin: 25px 0px -192px 60px;
   background-color: var(--button);
   color: var(--letter);
   font-size: 20px;
+  border-radius: 20px;
 }
 
 .container-account:hover{
@@ -125,11 +133,6 @@ header img {
   text-decoration: underline;
 }
 
-body {
-  background-image: linear-gradient( 0deg, rgb(0 0 0 / 57%), rgb(0 0 0 / 0%) ), url(../assets/img/fondo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .container-main {
   display: flex;
   width: auto;
@@ -157,7 +160,8 @@ form {
   /* padding: 10px; */
   /* gap: 25px; */
   margin-top: 50px;
-  height: 690px;
+  height: 700px;
+  width: 500px;
 }
 
 .icon-closed {
@@ -177,7 +181,7 @@ h2 {
 }
 
 label {
-  font-weight: 400;
+  font-weight: bold;
   /* margin-bottom: 30px; */
   /* margin-top: 30px; */
   color: var(--label);
@@ -196,11 +200,12 @@ input {
 }
 
 input::placeholder{
-  color: var(--label);
+  color: grey;
 }
 
 .formulario input[type="text"] {
   height: 120px;
+  font-size: 14px;
 }
 
 .input-file {
@@ -258,7 +263,7 @@ input::placeholder{
 .input-file div {
   width: 100px;
   height: 100px;
-  background-color: var(--letter);
+  /* background-color: var(--letter); */
   border-radius: 10px;
   background-image: url(../assets/icon/agregar.png);
   background-size: cover;

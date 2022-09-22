@@ -54,9 +54,6 @@ header img {
   margin: 10px 50px;
 }
 
-
-
-
 .container-list{
   display: flex;
   align-items: center;
@@ -69,6 +66,7 @@ header img {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  font-weight: bold;
 }
   
 .container-list ul li{
@@ -76,7 +74,7 @@ header img {
 }
 
 .container-list ul li a{
-  color: var(--button);
+  color: var(--label);
   text-decoration: none;
   font-size: 25px;
 }
@@ -153,6 +151,9 @@ main {
   gap: 20px;
   margin-bottom: 50px;
 }
+.icon-user img {
+  width: 90px;
+}
 
 .icon-user h2{
   font-size: 40px;
@@ -163,7 +164,7 @@ main {
 }
   
 .card-info{
-  background-color: #fdffff69;
+  background-color: var(--fondo-container);
   /* background: linear-gradient( 0deg, rgb(0 0 0 / 74%), rgb(98 97 103 / 85%) ); */
   border-radius: 10px;
   width: 750px;
