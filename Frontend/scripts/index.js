@@ -23,6 +23,8 @@ async function login(evt){
     
     if(response){
         window.location.href = "./html/home.html"
+        localStorage.setItem("email",user.email)
+        localStorage.setItem("password",user.password)
     }else{
         alert("Usuario y/o contraseña incorrecto")
     }
