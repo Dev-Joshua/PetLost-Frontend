@@ -145,12 +145,13 @@ label {
 
 
 button {
-  background-color: transparent;
+  background-color: var(--button);
+  border-color: var(--letter);
   border-radius: 8px;
   height: 55px;
   font-size: 25px;
   padding: 8px;
-  margin-top: 130px;
+  margin-top: 30px;
   cursor: pointer;
   border: none;
   width: 100%;
@@ -162,14 +163,10 @@ button a {
   color: var(--letter);
 }
 
-button a {
-  text-decoration: none;
-  color: var(--letter);
-}
 
-button:hover, a:hover {
-  text-decoration: underline;
-  color: #D6CAF8;
+button:hover {
+   background-color: var(--letter);
+   color: #000000;
 }
 
 .filtro-add{
@@ -316,7 +313,7 @@ thead{
 }
 
 tbody{
-  margin-top: 40px;
+  margin: 20px 0px;
   height: 100px;
   padding: 10px;
 }
@@ -333,41 +330,83 @@ tr{
 }
 
 
-.container-ul ul {
-  display: none;
-  padding: 0px;
-  position: absolute;
-  margin: 85px 0px 0px 195px;
-  font-size: 20px; 
+.modal ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  list-style: none;
+} 
+
+.modal ul li a {
+  color: var(--button);
+  font-size: 20px;
+  transition: all 0.5s linear;
 }
 
-.container-ul:hover{
+.modal ul li:hover a {
+  /* transform: translateY(110px); */
+  color: var(--label);
+}
+/* .modal:hover{
   background-color: transparent;
 }
 
-.container-ul:hover ul{
+.modal:hover ul{
   display: block;
   text-align: center;
-}
-/* .container-ul ul:hover {
+}  */
+
+/* .modal ul:hover {
   opacity: 1;
 } */
 
-.container-ul ul li {
+/* .modal ul li {
   display: inline-block;
   margin: 0 5px;
-}
+} */
 
-.container-ul ul li a {
+/* .modal ul li a {
   display: block;
   color: var(--texto);
   font-size: 20px;
   padding: 10px;
   transition: all 0.5s linear;
-}
+} */
 
-.container-ul ul li:hover a {
+/* .modal ul li:hover a {
   transform: translateY(-10px);
   color: var(--label);
+} */
+
+.modal-container {
+  display: flex;
+  /* background-color: #fdffff69; */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  top: 205px;
+  left: 125px;
+  /* height: 50px;
+  width: 200px; */
+  opacity: 0;
 }
 
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+.modal {
+  background-color: #fffffffa;
+  width: 250px;
+  max-width: 100%;
+  height: 110px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+.icon-closed {
+    margin-left: 160px;
+    margin-top: -20px;
+}
