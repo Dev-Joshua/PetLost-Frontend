@@ -8,16 +8,22 @@
   --letter: #CBF4F7;
   --white: #ffff;
   --button: #524388;
-  --hover:#00eeff80;
+  --hover: #00eeff80;
   /* --sm: 14px;
   --md: 16px;
   --lg: 20px; */
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
+  outline: none;
+}
+
+header {
+  margin: 0;
 }
 
 header img {
@@ -27,6 +33,9 @@ header img {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-image: linear-gradient(0deg, rgb(0 0 0 / 57%), rgb(0 0 0 / 0%)), url(./assets/img/principal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,37 +63,46 @@ body {
   font-size: 90px;
   text-align: center;
 }
+
 .texto-login p {
   color: var(--letter);
-    font-weight: bold;
-    font-size: 35px;
-    /* letter-spacing: 13px; */
-    opacity: 0.8;
-    margin-top: 20px;
-    text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  /* letter-spacing: 13px; */
+  opacity: 0.8;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .login {
   width: 560px;
   background: var(--fondo-container);
-  box-shadow: 0 0px 1px rgb(255 255 255), 0 1px 5px var(--letter);
+  box-shadow: 0 0px 1px rgb(255 255 255), 0 2px 3px var(--letter);
   height: 476px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 30px;
 }
+
 form {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
+
+form a {
+  text-align: center;
+  margin: 10px;
+  color: var(--letter);
+}
+
 label {
   font-weight: bold;
   margin-bottom: 10px;
   color: var(--label);
   font-size: 16px;
-  
+
 }
 
 input {
@@ -94,11 +112,10 @@ input {
   padding: 8px;
   margin-bottom: 30px;
   color: var(--button);
-  
   border: none;
 }
 
-input::placeholder{
+input::placeholder {
   color: var(--label);
 }
 
@@ -106,8 +123,9 @@ input::placeholder{
   background-color: var(--button);
   border-color: var(--letter);
 }
+
 .login h3 {
-  color: var(--letter );
+  color: var(--letter);
   text-align: center;
   margin: 20px;
   font-weight: lighter;
@@ -117,7 +135,7 @@ button {
   background-color: var(--button);
   border-color: var(--letter);
   border-radius: 8px;
-  height:60px;
+  height: 60px;
   font-size: 20px;
   font-weight: bold;
   padding: 8px;
@@ -131,11 +149,47 @@ button a {
 }
 
 
-button:hover, a:hover {
+/* button:hover,
+a:hover {
   background-color: var(--label);
   animation: .1s ease-in;
   color: #000000;
+} */
+
+/* html {
+  height: 100%;
+} */
+
+/* -----------------Pie de Pagina --------------------*/
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.footer-logos-co img {
+  width: 70px;
+  height: 45px;
+  margin: 5px;
+}
 
+.copyright {
+  color: var(--letter);
+  font-size: 12px;
+  opacity: .3;
+}
 
+/* Validacion del correo */
+#text {
+  display: block;
+  font-weight: bold;
+  font-style: oblique;
+  position: relative;
+  top: -25px;
+  text-align: center;
+}

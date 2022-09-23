@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,13 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Libreria jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
   <title>Inicio</title>
 </head>
+
 <body>
   <header>
     <section class="nav">
       <a href="../index.html">
-        <img class="logo" src="../assets/icon/logo.png" alt="logo" />
+        <img class="logo" src="../assets/logo2.png" alt="logo" />
       </a>
       <div class="container-list">
         <ul>
@@ -39,7 +43,6 @@
     </section>
   </header>
   <main>
-    <!-- <img src="../assets/img/foto_fondo1.jpg" width="400px" height="300px" alt="foto-fondo" /> -->
     <section class="filtro-add">
       <div class="order-container">
         <label for="order">Ordenar:</label>
@@ -55,47 +58,35 @@
         </a>
       </div>
     </section>
-
     <!-- cards -->
-    <section class="cards-ads">
+    <section class="cards-ads" id="cards-ads">
       <article class="card-pet">
-        <div class="image">
-          <img src="../assets/img/4.jpg" alt="">
-        </div>
+        <img src="https://revista.weepec.com/wp-content/uploads/2019/07/chihuahua-in-studio-BVACJ8D.jpg" alt="">
         <div class="card-body">
           <h3>Brandom Tercero</h3>
-          <table align="center">
-            <thead>
-              <tr>
-                <th>Informacion</th>
-              </tr>
-            </thead>
+          <table>
             <tbody>
               <tr>
                 <td>Perdido en el CC Cable Plaza</td>
               </tr>
-              <!-- <tr>
-                <td>Hr de perdida: 3pm</td>
-              </tr> -->
               <tr>
-                <td>Fecha de perdida:12/24/36</td>
+                <td>Fecha de perdida:12/24/36<br>Ultima vez visto:
+                  Por fundadores</td>
               </tr>
               <tr>
-                <td>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.</td>
+                <td>Descripción:Tiene collar con el nombre, Lleva ropa de superman, Es muy tranquilo.</td>
               </tr>
               <hr />
             </tbody>
           </table>
-          <!-- <p>Perdido en el CC Cable Plaza<br> Hr de perdida: 3pm<br>Fecha de perdida:12/24/36<br>Ultima vez visto:
-            Por fundadores<br>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.
-          </p> -->
+          <hr>
           <div class="container-ul">
             <div class="button-container">
-              <button id="contactar">Contactar</button>
+              <button class="contactar" id="contactar">Contactar</button>
               <div id="modal-container" class="modal-container">
                 <div class="modal">
                   <div id="close" class="icon-closed">
-                    <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar"> 
+                    <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar">
                   </div>
                   <ul>
                     <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -107,213 +98,23 @@
             </div>
           </div>
         </div>
-      </article>
-
-      <article class="card-pet">
-        <div class="image">
-          <img src="../assets/img/1.jpg" alt="">
-        </div>
-        <div class="card-body">
-          <h3>Brandom Tercero</h3>
-          <table align="center">
-            <thead>
-              <tr>
-                <th>Informacion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Perdido en el CC Cable Plaza</td>
-              </tr>
-              <!-- <tr>
-                <td>Hr de perdida: 3pm</td>
-              </tr> -->
-              <tr>
-                <td>Fecha de perdida:12/24/36</td>
-              </tr>
-              <tr>
-                <td>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.</td>
-              </tr>
-              <hr />
-            </tbody>
-          </table>
-          <!-- <p>Perdido en el CC Cable Plaza<br> Hr de perdida: 3pm<br>Fecha de perdida:12/24/36<br>Ultima vez visto:
-            Por fundadores<br>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.
-          </p> -->
-          <div class="container-ul">
-            <div class="button-container">
-              <button id="contactar">Contactar</button>
-              <div id="modal-container" class="modal-container">
-                <div class="modal">
-                  <div id="close" class="icon-closed">
-                    <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar"> 
-                  </div>
-                  <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="card-pet">
-        <div class="image">
-          <img src="../assets/img/2.jpg" alt="">
-        </div>
-        <div class="card-body">
-          <h3>Brandom Tercero</h3>
-          <table align="center">
-            <thead>
-              <tr>
-                <th>Informacion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Perdido en el CC Cable Plaza</td>
-              </tr>
-              <!-- <tr>
-                <td>Hr de perdida: 3pm</td>
-              </tr> -->
-              <tr>
-                <td>Fecha de perdida:12/24/36</td>
-              </tr>
-              <tr>
-                <td>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.</td>
-              </tr>
-              <hr />
-            </tbody>
-          </table>
-          <!-- <p>Perdido en el CC Cable Plaza<br> Hr de perdida: 3pm<br>Fecha de perdida:12/24/36<br>Ultima vez visto:
-            Por fundadores<br>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.
-          </p> -->
-          <div class="container-ul">
-            <div class="button-container">
-              <button id="contactar">Contactar</button>
-              <div id="modal-container" class="modal-container">
-                <div class="modal">
-                  <div id="close" class="icon-closed">
-                    <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar"> 
-                  </div>
-                  <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="card-pet">
-        <div class="image">
-          <img src="../assets/img/3.jpg" alt="">
-        </div>
-        <div class="card-body">
-          <h3>Brandom Tercero</h3>
-          <table align="center">
-            <thead>
-              <tr>
-                <th>Informacion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Perdido en el CC Cable Plaza</td>
-              </tr>
-              <!-- <tr>
-                <td>Hr de perdida: 3pm</td>
-              </tr> -->
-              <tr>
-                <td>Fecha de perdida:12/24/36</td>
-              </tr>
-              <tr>
-                <td>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.</td>
-              </tr>
-              <hr />
-            </tbody>
-          </table>
-          <!-- <p>Perdido en el CC Cable Plaza<br> Hr de perdida: 3pm<br>Fecha de perdida:12/24/36<br>Ultima vez visto:
-            Por fundadores<br>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.
-          </p> -->
-          <div class="container-ul">
-            <div class="button-container">
-              <button id="contactar">Contactar</button>
-              <div id="modal-container" class="modal-container">
-                <div class="modal">
-                  <div id="close" class="icon-closed">
-                    <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar"> 
-                  </div>
-                  <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="card-pet">
-        <div class="image">
-          <img src="../assets/img/pet1.jpeg" alt="">
-        </div>
-        <div class="card-body">
-          <h3>Brandom Tercero</h3>
-          <table align="center">
-            <thead>
-              <tr>
-                <th>Informacion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Perdido en el CC Cable Plaza</td>
-              </tr>
-              <!-- <tr>
-                <td>Hr de perdida: 3pm</td>
-              </tr> -->
-              <tr>
-                <td>Fecha de perdida:12/24/36</td>
-              </tr>
-              <tr>
-                <td>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.</td>
-              </tr>
-              <hr />
-            </tbody>
-          </table>
-          <!-- <p>Perdido en el CC Cable Plaza<br> Hr de perdida: 3pm<br>Fecha de perdida:12/24/36<br>Ultima vez visto:
-            Por fundadores<br>Descripción: Tiene collar con el nombre, lleva ropa de superman, es muy tranquilo.
-          </p> -->
-          <div class="container-ul">
-            <div class="button-container">
-              <button id="contactar">Contactar</button>
-              <div id="modal-container" class="modal-container">
-                <div class="modal">
-                  <div id="close" class="icon-closed">
-                    <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar"> 
-                  </div>
-                  <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
       </article>
     </section>
   </main>
-  <script src="../JavaScript/modal.js"></script>
+  <!-- <footer class="footer">
+    <section class="footer-logos">
+      <article class="footer-logos-co">
+        <img src="../assets/logomintic.png">
+        <img src="../assets/logoutp.png">
+        <div>
+          <span class="copyright">&copy <em>PetLost</em>. Todos los derechos reservados. 2022</span>
+        </div>
+      </article>
+    </section>
+  </footer> -->
 </body>
+<script src="../scripts/home.js"></script>
+<!-- Modal CARDS -->
+<script src="../scripts/modal.js"></script>
+
 </html>
