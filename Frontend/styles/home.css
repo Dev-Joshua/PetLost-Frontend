@@ -227,7 +227,8 @@ select {
 
 .cards-ads .card-pet .card-body h3 {
   font-size: 30px;
-  color: #ffffff;
+  color: var(--button);
+  font-weight: bold;
 }
 
 .cards-ads .card-pet .card-body ul {
@@ -252,7 +253,7 @@ select {
 }
 
 tbody {
-  color: white;
+  color: var(--letter);
 }
 
 .modal ul {
