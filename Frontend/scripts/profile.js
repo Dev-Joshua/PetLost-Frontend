@@ -60,14 +60,14 @@ async function updateInfo(){
     try {
         updatePerson();
         updateContact();
-        
-        // alert("Persona actualizada con éxito")
-        // window.location.href = "home.html";
+        updateUser();
+        alert("Persona actualizada con éxito")
+        window.location.href = "home.html";
     } catch (error) {
         console.log(error)
     }
     
-    // updateUser();
+
 
 }
 
@@ -101,4 +101,21 @@ async function updateContact(){
         body: JSON.stringify(contactObject)
     });
     
+}
+
+async function updateUser(){
+    let userObject={
+        email: email.value,
+        password: password.value
+    }
+    localStorage.setItem("email", email.value)
+    localStorage.setItem("password", password.value)
+    const requestUpdtUser = await fetch(URL_API+"usuarios/"+person[0].idPerson,{
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userObject)
+    });
 }

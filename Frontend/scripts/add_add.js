@@ -1,31 +1,29 @@
 URL_API = "http://localhost:8080/mascotas/add"
-async function createPet(evt){
+function createPet(evt){
     evt.preventDefault();
     const form = evt.target;
-    let pet = {
+    var pet = {
         name: form.name.value,
-        photo: form.photo.value,
         dateLost: form.dateLost.value,
         placeLost: form.placeLost.value,
-        id_person: 2,
+        details: "Lindo",
+        id_person: 1,
         id_kindpet: 1,
     }
-
-    let formData = new FormData();
-    formData.append('name', form.name.value);
-    formData.append('photo', form.photo.value);
-    formData.append('dateLost', form.dateLost.value);
-    formData.append('placeLost', form.placeLost.value);
-    formData.append('id_person', 2);
-    formData.append('id_kindpet', 1);
-
-    console.log(form.photo.value)
-    const request = await fetch(URL_API,{
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(pet)
-    });
+    let input = document.getElementById("input_image")
+    var file = input.files[0];
+    var reader = new FileReader();
+    reader.onloadend = async function(){
+        // console.log('RESULT', reader.result)
+        pet.photo = reader.result
+        const request = await fetch(URL_API,{
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(pet)
+        });
+    }
+    reader.readAsDataURL(file)
 }

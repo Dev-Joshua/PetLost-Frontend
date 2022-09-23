@@ -21,7 +21,7 @@ async function showPets(){
         container.innerHTML += `
         <article class="card-pet">
         <div class="image">
-          <img src="https://th.bing.com/th/id/R.ba99ac9999cd4133db4137f4b8b460de?rik=Qtk9n%2bF1ygLQEA&pid=ImgRaw&r=0" alt="">
+          <img src="${element.photo}" alt="">
         </div>
         <div class="card-body">
           <h3>${element.name}</h3>
