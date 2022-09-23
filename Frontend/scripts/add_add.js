@@ -9,7 +9,7 @@ async function createPet(evt) {
         placeLost: form.placeLost.value,
         id_person: 2,
         id_kindpet: 1,
-        details: "Prueba"
+        details: form.details.value
     }
 
     console.log(form.photo.value)

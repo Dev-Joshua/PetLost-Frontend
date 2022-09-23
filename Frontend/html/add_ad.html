@@ -48,28 +48,29 @@
       <div class="title">
         <h2>Nuevo anuncio</h2>
       </div>
-      <form class="formulario">
+      <form class="formulario" onsubmit="createPet(event)">
         <label for="name">Nombre mascota:</label>
-        <input type="varchar">
+        <input type="varchar" name="name">
         <label for="location">Fecha de perdida:</label>
-        <input type="date">
+        <input type="date" name="dateLost">
         <!-- <label for="location">Hora de perdida:</label>
         <input type="time"> -->
         <label for="location">Lugar de perdida:</label>
-        <input type="varchar">
+        <input type="varchar" name="placeLost">
         <label for="descripcion">Descripción del anuncio:</label>
-        <input type="text" placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc">
+        <input type="text" id="details" placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc">
         <div class="input-file" id="src-file">
           <label for="pics">Fotos de tu mascota:</label>
           <div>
             <!-- <img src="../assets/icon/add-img.png" width="80px" height="80px" alt=""> -->
           </div>
-          <input accept="image/*" type="file">
+          <input accept="image/*" type="file" name="photo">
         </div>
         <button type="submit">Crear Anuncio</button>
       </form>
     </section>
   </main>
 </body>
+<script src="../scripts/add_add.js"></script>
 
 </html>

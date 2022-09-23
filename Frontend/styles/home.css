@@ -180,7 +180,7 @@ select {
   /* width: 80%; */
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   margin: 20px 0px 0px 30px;
