@@ -24,6 +24,12 @@
 
 header {
   margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+}
+
+header {
+  margin: 0;
 }
 
 header img {
@@ -90,6 +96,13 @@ form {
   flex-direction: column;
   padding: 20px;
 }
+
+form a {
+  text-align: center;
+  margin: 10px;
+  color: var(--letter);
+}
+
 
 form a {
   text-align: center;

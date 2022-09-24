@@ -313,7 +313,6 @@ label {
   color: var(--label);
   font-size: 25px;
   text-align: center;
-  margin-right: 15px;
 }
 
 button {

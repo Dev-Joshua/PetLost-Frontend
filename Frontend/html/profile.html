@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/profile.css" type="text/css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
   <title>Profile</title>
 </head>
 
@@ -41,33 +42,34 @@
         </div>
         <div class="contact-details">
           <label for="nombre">Nombre</label>
-          <input type="text" placeholder="Sara " required autofocus>
+          <input type="text" placeholder="Sara " required autofocus id="name">
 
           <label for="apellido">Apellido</label>
-          <input type="text" placeholder="Martinez" required>
+          <input type="text" placeholder="Martinez" required id="lastname">
 
           <label for="ciudad">Ciudad</label>
-          <input type="text" placeholder="Medellin" required>
+          <input type="text" placeholder="Medellin" required id="city">
 
           <label for="telefono">Telefono</label>
-          <input type="text" placeholder="3245566779" required>
+          <input type="text" placeholder="3245566779" required id="phone">
 
           <label for="dirección">Direccion</label>
-          <input type="text" placeholder="Cra 123 #45-12 Sabaneta" required>
+          <input type="text" placeholder="Cra 123 #45-12 Sabaneta" required id="address">
 
           <label for="email">Email</label>
-          <input type="text" placeholder="sarita@exampple.com" required>
+          <input type="text" placeholder="sarita@exampple.com" required id="email">
 
           <label for="clave">Contraseña</label>
-          <input type="password" placeholder="*********" required>
+          <input type="password" placeholder="*********" required id="password">
 
         </div>
-        <button>
+        <button onclick="updateInfo()">
           <a class="edit" href="#">Editar Cuenta</a>
         </button>
     </div>
     </section>
   </main>
+  <script src="../scripts/profile.js"></script>
 </body>
 
 </html>

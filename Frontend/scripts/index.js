@@ -21,6 +21,8 @@ async function login(evt) {
     const response = await request.json();
     if (response) {
         window.location.href = "./html/home.html"
+        localStorage.setItem("email",user.email)
+        localStorage.setItem("password",user.password)
     } else {
         Swal.fire({
             icon: 'error',
@@ -28,6 +30,7 @@ async function login(evt) {
         })
     }
 }
+
 
 // Esta funcion permite validar el correo electronico
 

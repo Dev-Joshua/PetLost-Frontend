@@ -20,7 +20,7 @@ async function showPets() {
   pets.forEach(element => {
     container.innerHTML += `
     <article class="card-pet">
-    <img src="https://revista.weepec.com/wp-content/uploads/2019/07/chihuahua-in-studio-BVACJ8D.jpg" alt="">
+    <img src="${element.photo}" alt="">
     <div class="card-body">
       <h3>${element.name}</h3>
       <table>
@@ -29,10 +29,10 @@ async function showPets() {
             <td>${element.placeLost}</td>
           </tr>
           <tr>
-            <td>${element.dateLost}</td>
+            <td>Fehca de perdida: ${(element.dateLost).slice(0,10).replaceAll("-","/")}</td>
           </tr>
           <tr>
-            <td>${element.details}</tr>
+            <td>Descripcion: ${element.details}</tr>
           <hr />
         </tbody>
       </table>
