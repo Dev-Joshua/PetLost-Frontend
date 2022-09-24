@@ -21,8 +21,17 @@ async function login(evt) {
     const response = await request.json();
     if (response) {
         window.location.href = "./html/home.html"
+        const id_request = await fetch("http://localhost:8080/usuarios/id",{
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
         localStorage.setItem("email",user.email)
         localStorage.setItem("password",user.password)
+        localStorage.setItem("id", await id_request.json())
     } else {
         Swal.fire({
             icon: 'error',

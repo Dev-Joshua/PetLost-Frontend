@@ -7,7 +7,7 @@ function createPet(evt){
         dateLost: form.dateLost.value,
         placeLost: form.placeLost.value,
         details: document.getElementById("details").value,
-        id_person: 1,
+        id_person: localStorage.getItem("id"),
         id_kindpet: 1,
     }
     let input = document.getElementById("input_image")
