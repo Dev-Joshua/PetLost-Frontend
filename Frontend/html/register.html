@@ -23,33 +23,33 @@
           <div class="title">
             <h2>Crear cuenta</h2>
           </div>
-          <form>
+          <form onsubmit="registerUser(event)">
             <div class="contact-details">
               <div>
                 <label for="">Nombre</label>
-                <input type="text" placeholder="" required autofocus />
+                <input id="name_input" type="text" placeholder="" required autofocus />
                 <label class="city" for="">Ciudad</label>
-                <input type="text" placeholder="" required />
+                <input id="lastname_input" type="text" placeholder="" required />
               </div>
               <div>
                 <label class="last-name" for="">Apellido</label>
-                <input type="text" placeholder="" required />
+                <input id="city_input" type="text" placeholder="" required />
                 <label for="" type="tel">Teléfono</label>
-                <input type="text" placeholder="" required />
+                <input id="phone_input" type="text" placeholder="" required />
               </div>
             </div>
             <div class="second-details">
               <label for="">Dirección</label>
-              <input class="second-input" type="text" placeholder="" required />
+              <input id="address_input" class="second-input" type="text" placeholder="" required />
               <label for="">Email</label>
-              <input class="second-input" type="email" placeholder="" required />
+              <input id="email_input" class="second-input" type="email" placeholder="" required />
               <label for="">Contraseña</label>
-              <input class="second-input" type="password" placeholder="*********" required />
+              <input id="pass_input" class="second-input" type="password" placeholder="*********" required />
               <label for="">Confirmar contraseña</label>
-              <input class="second-input" type="password" placeholder="*********" required />
+              <input id="repeat_pass_input" class="second-input" type="password" placeholder="*********" required />
             </div>
-            <button>
-              <a href="./home.html">Registrarse</a>
+            <button type="submit">
+              <a onclick="registerUser()">Registrarse</a>
             </button>
           </form>
         </div>
@@ -68,5 +68,7 @@
     </section>
   </footer> -->
 </body>
+<script src="../scripts/register.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </html>

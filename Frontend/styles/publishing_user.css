@@ -215,3 +215,7 @@ button:hover,
   animation: .1s ease-in;
   color: #000000;
 }
+
+.swal2-styled{
+  width: 60px;
+}
