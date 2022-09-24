@@ -73,7 +73,7 @@ header img {
   align-items: center;
   text-transform: uppercase;
   font-size: 20px;
-  margin-left: 60vh;
+  /* margin-left: 60vh;  Se tiene problema con el margin*/
 }
 
 .container-list ul {
@@ -363,4 +363,17 @@ button:hover {
   color: var(--letter);
   font-size: 12px;
   opacity: .3;
+}
+
+/* Medias Querys */
+
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
 }
