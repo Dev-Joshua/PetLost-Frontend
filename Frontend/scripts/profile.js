@@ -11,24 +11,24 @@ var person = null
 var contact = null
 var user = null
 
-$(document).ready(function(){
+$(document).ready(function () {
     showInfo();
 });
 
-function showInfo(){
+function showInfo() {
     user = {
         email: localStorage.getItem("email"),
         password: localStorage.getItem("password")
     }
-    email.value = user.email    
-    password.value = user.password  
+    email.value = user.email
+    password.value = user.password
     putInfoPerson(user);
     putInfoContact(user);
-  
+
 }
 
-async function putInfoPerson(user){
-    const requestPerson = await fetch(URL_API+"personas/info",{
+async function putInfoPerson(user) {
+    const requestPerson = await fetch(URL_API + "personas/info", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -41,8 +41,8 @@ async function putInfoPerson(user){
     lastname.value = person[0].lastnames
 }
 
-async function putInfoContact(user){
-    const requestContact = await fetch(URL_API+"contactos/info",{
+async function putInfoContact(user) {
+    const requestContact = await fetch(URL_API + "contactos/info", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -56,27 +56,33 @@ async function putInfoContact(user){
     address.value = contact[0].address
 }
 
-async function updateInfo(){
+async function updateInfo() {
     try {
         updatePerson();
         updateContact();
         updateUser();
+        // Swal.fire({
+        //     icon: 'success',
+        //     title: 'Persona actualizada con éxito',
+        //     showConfirmButton: false,
+        //     timer: 1500
+        //   })
         alert("Persona actualizada con éxito")
         window.location.href = "home.html";
     } catch (error) {
         console.log(error)
     }
-    
+
 
 
 }
 
-async function updatePerson(){
-    let personObject={
+async function updatePerson() {
+    let personObject = {
         names: name_person.value,
         lastnames: lastname.value
     }
-    const requestUpdtPerson = await fetch(URL_API+"personas/"+person[0].idPerson,{
+    const requestUpdtPerson = await fetch(URL_API + "personas/" + person[0].idPerson, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -86,13 +92,13 @@ async function updatePerson(){
     });
 }
 
-async function updateContact(){
-    let contactObject={
+async function updateContact() {
+    let contactObject = {
         address: address.value,
         city: city.value,
         phone: phone.value
     }
-    const requestUpdtContact = await fetch(URL_API+"contactos/"+person[0].idPerson,{
+    const requestUpdtContact = await fetch(URL_API + "contactos/" + person[0].idPerson, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -100,17 +106,17 @@ async function updateContact(){
         },
         body: JSON.stringify(contactObject)
     });
-    
+
 }
 
-async function updateUser(){
-    let userObject={
+async function updateUser() {
+    let userObject = {
         email: email.value,
         password: password.value
     }
     localStorage.setItem("email", email.value)
     localStorage.setItem("password", password.value)
-    const requestUpdtUser = await fetch(URL_API+"usuarios/"+person[0].idPerson,{
+    const requestUpdtUser = await fetch(URL_API + "usuarios/" + person[0].idPerson, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
