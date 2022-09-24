@@ -54,6 +54,12 @@ main {
   margin: 115px 0px;
 }
 
+.icon-closed a {
+  position: relative;
+  top: -30px;
+  left: 250px;
+}
+
 .register {
   width: 560px;
   background: var(--fondo-container);

@@ -19,7 +19,6 @@
   outline: none;
 }
 
-
 body {
   width: 100%;
   /* min-height: 100vh; */
@@ -31,17 +30,19 @@ body {
   background-position: center;
   backdrop-filter: blur(5px);
   background-attachment: fixed;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
+/* Header */
 header {
-  position: relative;
-  top: 0;
+  width: 100%;
+  height: 120px;
+  /* background-color: var(--header); */
 }
 
 header img {
   width: 250px;
-  /* margin: 10px; */
+  margin: 10px;
 }
 
 .profile-image {
@@ -59,9 +60,12 @@ header img {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* height: 120px; */
-  margin: 30px 50px 0px 50px;
-  /* align-items: center;*/
+  height: 120px;
+  margin: 0px 50px 0px 50px;
+}
+
+.nav .logo {
+  margin-top: 35px;
 }
 
 .container-list {
@@ -69,7 +73,7 @@ header img {
   align-items: center;
   text-transform: uppercase;
   font-size: 20px;
-  margin-left: 55vh;
+  /* margin-left: 60vh;  Se tiene problema con el margin*/
 }
 
 .container-list ul {
@@ -90,17 +94,16 @@ header img {
 }
 
 .container-list ul li a:hover {
-  /* color: var(--letter); */
+  color: var(--letter);
   text-decoration-line: underline;
   font-weight: bold;
-  /* background-color: var(--button);
-  border-radius: 10px; */
 }
 
 .container-account {
   align-items: center;
   display: flex;
   flex-direction: row-reverse;
+  z-index: 1;
 }
 
 .container-account ul {
@@ -134,16 +137,20 @@ header img {
 .container-account li a {
   color: #ffffff;
   text-decoration: none;
+
 }
 
 .container-account li a:hover {
   text-decoration: underline;
 }
 
+/* Main */
+
 main {
-  height: 80vh;
+  /* height: 80vh; */
   width: 100%;
 }
+
 
 .filtro-add {
   display: flex;
@@ -183,7 +190,7 @@ select {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px 0px 0px 30px;
+  margin: 20px 30px 0px 30px;
 }
 
 .cards-ads .card-pet {
@@ -358,4 +365,25 @@ button:hover {
   color: var(--letter);
   font-size: 12px;
   opacity: .3;
+}
+
+/* Medias Querys */
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .filtro-add {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 }

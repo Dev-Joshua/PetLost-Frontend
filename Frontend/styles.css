@@ -206,3 +206,10 @@ a:hover {
   top: -25px;
   text-align: center;
 }
+
+/* Responsive */
+@media (max-width: 920px) {
+  .container-main {
+    flex-direction: column;
+  }
+}
