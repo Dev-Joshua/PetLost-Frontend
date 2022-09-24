@@ -149,6 +149,7 @@ header img {
   width: auto;
   justify-content: space-evenly;
   align-items: center;
+  height: 90vh;
 }
 
 .container-form {
