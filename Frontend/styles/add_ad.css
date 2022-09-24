@@ -32,9 +32,10 @@ body {
   backdrop-filter: blur(2px);
 }
 
+/* Header */
 header {
   width: 100%;
-  /* height: 120px; */
+  height: 120px;
   /* background-color: var(--header); */
 }
 
@@ -44,7 +45,7 @@ header img {
 }
 
 .profile-image {
-  /* margin-top: 8px; */
+  margin-top: 8px;
   margin-right: 50px;
 }
 
@@ -58,8 +59,8 @@ header img {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* height: 120px; */
-  margin: 0px 50px;
+  height: 120px;
+  margin: 0px 50px 0px 50px;
 }
 
 .nav .logo {
@@ -140,6 +141,8 @@ header img {
 .container-account li a:hover {
   text-decoration: underline;
 }
+
+/* Main */
 
 .container-main {
   display: flex;
