@@ -1,6 +1,7 @@
 const URL_API = "http://localhost:8080/mascotas"
 $(document).ready(function () {
   showPets();
+  
 });
 
 async function showPets() {
@@ -39,10 +40,10 @@ async function showPets() {
       <hr>
       <div class="container-ul">
         <div class="button-container">
-          <button class="contactar" id="contactar">Contactar</button>
-          <div id="modal-container" class="modal-container">
+          <button class="contactar" id="">Contactar</button>
+          <div id="" class="modal-container">
             <div class="modal">
-              <div id="close" class="icon-closed">
+              <div id="" class="icon-closed">
                 <img src="../assets/icon/closed - color.png" width="20px" height="20px" alt="cerrar">
               </div>
               <ul>
@@ -58,18 +59,32 @@ async function showPets() {
   </article>
         `
   });
+  const contactar = document.getElementsByClassName("contactar");
+  const close = document.getElementsByClassName('icon-closed');
+
+  for (let index = 0; index < contactar.length; index++) {
+      contactar[index].addEventListener('click', () => {
+          contactar[index].nextElementSibling.classList.add('show')
+          // alert('prueba')
+      })
+
+      close[index].addEventListener('click', () => {
+          close[index].parentElement.parentElement.classList.remove('show')
+          // alert('prueba')
+      })   
+  } 
 }
 
-const contactar = document.getElementById("contactar");
-const modal_container = document.getElementById('modal-container');
-const close = document.getElementById('close');
+// const contactar = document.getElementById("contactar");
+// const modal_container = document.getElementById('modal-container');
+// const close = document.getElementById('close');
 
-contactar.addEventListener('click', () => {
-  modal_container.classList.add('show')
-  // alert('prueba')
-})
+// contactar.addEventListener('click', () => {
+//   modal_container.classList.add('show')
+//   // alert('prueba')
+// })
 
-close.addEventListener('click', () => {
-  modal_container.classList.remove('show')
-  // alert('prueba')
-})
+// close.addEventListener('click', () => {
+//   modal_container.classList.remove('show')
+//   // alert('prueba')
+// })

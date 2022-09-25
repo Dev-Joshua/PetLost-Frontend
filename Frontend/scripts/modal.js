@@ -1,13 +1,20 @@
-const contactar = document.getElementById("contactar");
-const modal_container = document.getElementById('modal-container');
-const close = document.getElementById('close');
+$(document).ready(function () {
+    var contactar = document.getElementsByClassName("contactar");
+    var close = document.getElementsByClassName('icon-closed');
 
-contactar.addEventListener('click', () => {
-    modal_container.classList.add('show')
-    // alert('prueba')
-})
 
-close.addEventListener('click', () => {
-    modal_container.classList.remove('show')
-    // alert('prueba')
-})
+    for (let index = 0; index < contactar.length; index++) {
+        contactar[index].addEventListener('click', () => {
+            contactar[index].nextElementSibling.classList.add('show')
+            // alert('prueba')
+        })
+
+        close[index].addEventListener('click', () => {
+            close[index].parentElement.parentElement.classList.remove('show')
+            // alert('prueba')
+        })   
+    }
+
+});
+
+
