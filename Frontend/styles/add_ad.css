@@ -280,6 +280,12 @@ input::placeholder {
   margin-top: 20px;
 }
 
+.form-select {
+  text-align: center;
+}
+
+.form-select label {}
+
 #src-file::content {
   content: 'Seleccionar fotos';
 }

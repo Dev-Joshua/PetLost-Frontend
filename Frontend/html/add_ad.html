@@ -56,6 +56,14 @@
         <input type="date" name="dateLost">
         <label for="location">Lugar de perdida:</label>
         <input type="varchar" name="placeLost">
+        <!-- Seleccionar perro o gato -->
+        <div class="form-select">
+          <input type="radio" id="cat" name="pets" value="cat">
+          <label for="cat">Gato</label>
+          <input type="radio" id="dog" name="pets" value="dog" checked>
+          <label for="dog">Perro</label>
+        </div>
+
         <label for="descripcion">Descripción del anuncio:</label>
         <!-- <input type="text" id="details" placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"> -->
         <textarea type="text" name="text" id="details" rows="5" cols="50"
