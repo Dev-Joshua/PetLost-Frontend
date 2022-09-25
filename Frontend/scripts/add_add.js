@@ -1,5 +1,5 @@
 URL_API = "http://localhost:8080/mascotas/add"
-function createPet(evt){
+async function createPet(evt) {
     evt.preventDefault();
     const form = evt.target;
     var pet = {
@@ -13,10 +13,10 @@ function createPet(evt){
     let input = document.getElementById("input_image")
     var file = input.files[0];
     var reader = new FileReader();
-    reader.onloadend = async function(){
+    reader.onloadend = async function () {
         // console.log('RESULT', reader.result)
         pet.photo = reader.result
-        const request = await fetch(URL_API,{
+        const request = await fetch(URL_API, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -26,4 +26,6 @@ function createPet(evt){
         });
     }
     reader.readAsDataURL(file)
+    await Swal.fire('Mascota creada con éxito')
+    window.location.href = "./home.html"
 }

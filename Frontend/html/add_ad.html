@@ -54,14 +54,12 @@
         <input type="varchar" name="name">
         <label for="location">Fecha de perdida:</label>
         <input type="date" name="dateLost">
-        <!-- <label for="location">Hora de perdida:</label>
-        <input type="time"> -->
         <label for="location">Lugar de perdida:</label>
         <input type="varchar" name="placeLost">
         <label for="descripcion">Descripción del anuncio:</label>
-        <input type="text" id="details" placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc">
-        <!-- <textarea name="text" id="details" cols="30" rows="10"
-          placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"></textarea> -->
+        <!-- <input type="text" id="details" placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"> -->
+        <textarea type="text" name="text" id="details" rows="5" cols="50"
+          placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"></textarea>
         <div class="input-file" id="src-file">
           <label for="pics">Fotos de tu mascota:</label>
           <div>
@@ -74,7 +72,8 @@
     </section>
   </main>
   <script src="../scripts/add_add.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-<script src="../scripts/add_add.js"></script>
+
 
 </html>

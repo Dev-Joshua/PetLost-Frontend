@@ -63,6 +63,52 @@ body {
   width: 560px;
 }
 
+/* Animacion texto login */
+.texto-login-ani {
+  animation: texto-login-ani 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: texto-login-ani 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes texto-login-ani {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes texto-login-ani {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* Fin animaciones */
+
 .texto-login h1 {
   color: var(--letter);
   font-weight: bold;
@@ -79,6 +125,7 @@ body {
   margin-top: 20px;
   text-align: center;
 }
+
 
 .login {
   width: 560px;
@@ -115,7 +162,6 @@ label {
   margin-bottom: 10px;
   color: var(--label);
   font-size: 16px;
-
 }
 
 input {
@@ -130,6 +176,26 @@ input {
 
 input::placeholder {
   color: var(--label);
+}
+
+#toggle {
+  cursor: pointer;
+  color: var(--button);
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: -60px;
+  right: -90%;
+  width: 30px;
+}
+
+#toggle::before {
+  content: '\f06e';
+  font-family: fontAwesome;
+}
+
+#toggle.hide::before {
+  content: '\f070';
 }
 
 .button {
