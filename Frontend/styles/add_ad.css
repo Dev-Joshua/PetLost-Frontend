@@ -218,6 +218,7 @@ input {
   color: var(--button);
   border: none;
   margin-top: 5px;
+  outline: none;
 }
 
 input::placeholder {
@@ -315,4 +316,15 @@ button:hover {
   background-color: var(--label);
   animation: .1s ease-in;
   color: #000000;
+}
+
+textarea {
+  resize: none;
+  color: var(--button);
+  font-size: 18px;
+  outline: none;
+  border-radius: 5px;
+  padding: 0px 8px;
+  line-height: 1.5;
+  margin-top: 10px;
 }
