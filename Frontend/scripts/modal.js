@@ -1,4 +1,4 @@
-const contactar = document.getElementById("contactar");
+const contactar = document.getElementsByClassName("contactar");
 const modal_container = document.getElementById('modal-container');
 const close = document.getElementById('close');
 

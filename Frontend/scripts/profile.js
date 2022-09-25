@@ -61,20 +61,17 @@ async function updateInfo() {
         updatePerson();
         updateContact();
         updateUser();
-        // Swal.fire({
-        //     icon: 'success',
-        //     title: 'Persona actualizada con éxito',
-        //     showConfirmButton: false,
-        //     timer: 1500
-        //   })
-        alert("Persona actualizada con éxito")
+        Swal.fire({
+            icon: 'success',
+            title: 'Persona actualizada con éxito',
+            showConfirmButton: false,
+            timer: 2000
+        })
+        // alert("Persona actualizada con éxito")
         window.location.href = "home.html";
     } catch (error) {
         console.log(error)
     }
-
-
-
 }
 
 async function updatePerson() {
