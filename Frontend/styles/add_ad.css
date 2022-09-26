@@ -190,7 +190,7 @@ form {
   flex-wrap: nowrap;
   position: relative;
   top: 20px;
-  left: 200px;
+  left: 240px;
 }
 
 h2 {
@@ -460,5 +460,8 @@ textarea {
   }
   form {
     width: 400px;
+  }
+  .icon-closed {
+    left: 200px;
   }
 }
