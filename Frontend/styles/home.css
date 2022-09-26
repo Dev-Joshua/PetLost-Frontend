@@ -492,7 +492,7 @@ button:hover {
 
 @media (max-width: 800px) {
   .nav {
-    margin: 0px 50px 0px 50px;
+    margin-right: 20px;
   }
   .profile-image {
     display: none;
@@ -501,7 +501,7 @@ button:hover {
   .container-account ul {
     display: block;
     place-content: space-between;
-    margin: 0px 0px 0px -50px;
+    margin: 0px;
     border-radius: 5px;
     padding: 40px;
     width: 250px;
@@ -532,6 +532,7 @@ button:hover {
     left: 10px;
     top: 20px;
     z-index: 9999;
+    cursor: pointer;
   }
 
   #menu:hover {
@@ -565,7 +566,7 @@ button:hover {
     font-size: 20px;
   }
   .filtro-add {
-    width: 300px;
+    width: auto;
     height: 100px;
     display: flex;
     flex-direction: column;
