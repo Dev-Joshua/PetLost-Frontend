@@ -65,6 +65,11 @@ header img {
   margin-top: 35px;
 }
 
+/* escondo el hamburguer-menu */
+#menu, #menu-check {
+  display: none;
+}
+
 .container-list {
   display: flex;
   align-items: center;
@@ -360,4 +365,99 @@ textarea {
   padding: 0px 8px;
   line-height: 1.5;
   margin-top: 10px;
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    margin: 0px;
+  }
+  .nav .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    margin: 0px 50px 0px 50px;
+  }
+
+  .profile-image {
+    display: none;
+  }
+  
+  .container-account ul {
+    display: block;
+    place-content: space-between;
+    margin: 0px 0px 0px -50px;
+    border-radius: 5px;
+    padding: 40px;
+    width: 250px;
+  }
+  .container-account ul li {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .container-account ul li a:hover {
+    color: #CBF4F7;
+  }
+  #menu-check:not(:checked) ~ .container-account .profile-list {
+    display: none;
+  }
+
+  #menu-check:checked ~ .container-account {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    /* border: 3px solid var(--label); */
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    z-index: 9999;
+  }
+
+  #menu:hover {
+    color: var(--letter);
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  header .container-account {
+    position: absolute;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-list ul {
+    justify-content: flex-end;
+  }
+  .container-list ul li {
+    margin-left: 20px;
+  }
+  .container-list ul li a{
+    font-size: 20px;
+  }
+  .container-account ul {
+    padding: 20px;
+    width: 220px;
+  }
+  .container-account ul li {
+    font-size: 20px;
+  }
+  #menu {
+    font-size: 40px;
+    top: 30px;
+  }
+  form {
+    width: 400px;
+  }
 }

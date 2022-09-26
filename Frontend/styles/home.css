@@ -63,6 +63,11 @@ header img {
   margin-top: 35px;
 }
 
+/* escondo el hamburguer-menu */
+#menu, #menu-check {
+  display: none;
+}
+
 .container-list {
   display: flex;
   align-items: center;
@@ -196,7 +201,7 @@ select {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px 30px 0px 30px;
+  margin: 75px 30px 0px 30px;
 }
 
 .cards-ads .card-pet {
@@ -476,22 +481,112 @@ button:hover {
 }
 
 /* Medias Querys */
-
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .logo {
     display: none;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
+  }  
+  .nav {
+    margin: 0px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  .nav {
+    margin: 0px 50px 0px 50px;
+  }
+  .profile-image {
+    display: none;
+  }
+  
+  .container-account ul {
+    display: block;
+    place-content: space-between;
+    margin: 0px 0px 0px -50px;
+    border-radius: 5px;
+    padding: 40px;
+    width: 250px;
+  }
+  .container-account ul li {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .container-account ul li a:hover {
+    color: #CBF4F7;
+  }
+
+  #menu-check:not(:checked) ~ .container-account .profile-list {
+    display: none;
+  }
+
+  #menu-check:checked ~ .container-account {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    /* border: 3px solid var(--label); */
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    z-index: 9999;
+  }
+
+  #menu:hover {
+    color: var(--letter);
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  header .container-account {
+    position: absolute;
+  }
+}
+
+@media (max-width: 660px) {
+  .container-list ul {
+    justify-content: flex-end;
+  }
+  .container-list ul li {
+    margin-left: 20px;
+  }
+  .container-list ul li a{
+    font-size: 20px;
+  }
+  .container-account ul {
+    width: 220px;
+    padding: 15px;
+  }
+  .container-account li a {
+    font-size: 20px;
+  }
   .filtro-add {
+    width: 300px;
+    height: 100px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .order-container label, .ad-container label {
+    font-size: 18px;
+  }
+  .ad-container {
+    margin-top: 30px;
+  }
+  .ad-container img {
+    width: 30px;
+    height: 30px;
+  }
+  .cards-ads {
+    justify-content: center;
+  }
+  #menu {
+    font-size: 40px;
+    top: 30px;
   }
 }
