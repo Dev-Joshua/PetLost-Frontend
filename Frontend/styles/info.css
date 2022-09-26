@@ -67,7 +67,7 @@ header img {
   align-items: center;
   text-transform: uppercase;
   font-size: 20px;
-  margin-left: 60vh;
+  /* margin-left: 60vh; */
 }
 
 .container-list ul {

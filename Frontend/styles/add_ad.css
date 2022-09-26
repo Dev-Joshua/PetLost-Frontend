@@ -72,7 +72,7 @@ header img {
   align-items: center;
   text-transform: uppercase;
   font-size: 20px;
-  margin-left: 60vh;
+  /* margin-left: 60vh; */
 }
 
 .container-list ul {
@@ -279,6 +279,12 @@ input::placeholder {
   align-items: flex-end;
   margin-top: 20px;
 }
+
+.form-select {
+  text-align: center;
+}
+
+.form-select label {}
 
 #src-file::content {
   content: 'Seleccionar fotos';
