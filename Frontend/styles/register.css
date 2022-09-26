@@ -187,3 +187,35 @@ a:hover {
   font-size: 12px;
   opacity: .3;
 }
+
+/* Responsive */
+@media (max-width: 920px) {
+  .container-main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .texto-login h1 {
+    font-size: 70px;
+  }
+  .texto-login p {
+    font-size: 30px;
+  }
+  header img {
+    margin: 15px;
+    width: 220px;
+  }
+  .register {
+    width: 500px;
+  }
+  form {
+    width: 470px;
+  }
+  .second-details {
+    grid-template-columns: 85px 300px;
+  }
+  .icon-closed a{
+    left: 220px;
+  }
+}

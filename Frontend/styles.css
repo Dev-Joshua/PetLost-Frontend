@@ -279,3 +279,19 @@ a:hover {
     flex-direction: column;
   }
 }
+
+@media (max-width: 620px) {
+  .texto-login h1 {
+    font-size: 70px;
+  }
+  .texto-login p {
+    font-size: 30px;
+  }
+  header img {
+    margin: 15px;
+    width: 220px;
+  }
+  .login {
+    width: 500px;
+  }
+}
