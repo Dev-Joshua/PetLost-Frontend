@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 async function showPets() {
-  const request_person = await fetch(URL_API, {
+  const request_pets = await fetch(URL_API, {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
@@ -13,7 +13,7 @@ async function showPets() {
     }
   });
 
-  const pets = await request_person.json();
+  const pets = await request_pets.json();
 
   const container = document.getElementById("cards-ads")
   console.log(container)
@@ -65,26 +65,10 @@ async function showPets() {
   for (let index = 0; index < contactar.length; index++) {
       contactar[index].addEventListener('click', () => {
           contactar[index].nextElementSibling.classList.add('show')
-          // alert('prueba')
       })
 
       close[index].addEventListener('click', () => {
           close[index].parentElement.parentElement.classList.remove('show')
-          // alert('prueba')
       })   
   } 
 }
-
-// const contactar = document.getElementById("contactar");
-// const modal_container = document.getElementById('modal-container');
-// const close = document.getElementById('close');
-
-// contactar.addEventListener('click', () => {
-//   modal_container.classList.add('show')
-//   // alert('prueba')
-// })
-
-// close.addEventListener('click', () => {
-//   modal_container.classList.remove('show')
-//   // alert('prueba')
-// })

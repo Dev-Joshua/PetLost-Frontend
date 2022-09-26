@@ -7,9 +7,7 @@ async function login(evt) {
         password: document.getElementById("password").value
     }
 
-    // console.log(user);
-
-    const request = await fetch(URL_API, {
+    const request_login = await fetch(URL_API, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -18,7 +16,7 @@ async function login(evt) {
         body: JSON.stringify(user)
     });
 
-    const response = await request.json();
+    const response = await request_login.json();
     if (response) {
         const id_request = await fetch("http://localhost:8080/usuarios/id", {
             method: 'POST',
@@ -28,9 +26,13 @@ async function login(evt) {
             },
             body: JSON.stringify(user)
         })
+        let id_person = await id_request.json();
+        let name_person = await savePersonInSession(id_person);
+
         localStorage.setItem("email", user.email)
         localStorage.setItem("password", user.password)
-        localStorage.setItem("id", await id_request.json())
+        localStorage.setItem("id", id_person)
+        localStorage.setItem("namePerson", name_person)
         window.location.href = "./html/home.html"
         
     } else {
@@ -41,32 +43,6 @@ async function login(evt) {
     }
 }
 
-///EMAIL CHECK FROM DATABASE///
-
-// $(document).ready(function () {
-//     $('#email').blur(function () {
-//         var email = $(this).val();
-//         $.ajax({
-//             url: 'http://localhost:8080/usuarios/id',
-//             method: "POST",
-//             data: { email: emailValue },
-//             success: function (data) {
-//                 if (data != '0') {
-//                     setError(email, 'Lo sentimos, este correo ya se encuentra registrado');
-
-//                 }
-//                 else {
-//                     setSuccess(email);
-//                 }
-//             }
-
-//         });
-//     })
-// });
-
-///EMAIL CHECK FROM DATABASE///
-
-// Mostrar contraseña
 
 const password = document.getElementById('password');
 const toggle = document.getElementById('toggle');
@@ -79,4 +55,16 @@ function showHide() {
         password.setAttribute('type', 'password');
         toggle.classList.remove('hide')
     }
+}
+
+async function savePersonInSession(id){
+    const person_request = await fetch("http://localhost:8080/personas/"+id,{
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+    let person = await person_request.json()
+    console.log(person.names)
+    return person.names;
 }
