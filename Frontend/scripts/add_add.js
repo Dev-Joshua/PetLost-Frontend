@@ -1,15 +1,20 @@
-URL_API = "http://localhost:8080/mascotas/add"
+URL_API = "http://localhost:8080/mascotas/add";
+const id_kind_pet = {
+    'cat': 1,
+    'dog': 2
+}
 document.getElementsByClassName("profile-name")[0].innerHTML = localStorage.getItem("namePerson")
 async function createPet(evt) {
     evt.preventDefault();
     const form = evt.target;
+    let kind_pet = document.querySelector('input[name="pets"]:checked').value
     var pet = {
         name: form.name.value,
         dateLost: form.dateLost.value,
         placeLost: form.placeLost.value,
         details: document.getElementById("details").value,
         id_person: localStorage.getItem("id"),
-        id_kindpet: 1,
+        id_kindpet: id_kind_pet[kind_pet],
     }
     let input = document.getElementById("input_image")
     var file = input.files[0];
