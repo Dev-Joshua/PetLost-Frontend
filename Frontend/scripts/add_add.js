@@ -32,6 +32,11 @@ async function createPet(evt) {
         });
     }
     reader.readAsDataURL(file)
-    await Swal.fire('Mascota creada con éxito')
+    await Swal.fire({
+        icon: 'success',
+        title: 'Mascota creada con éxito',
+        confirmButtonColor: '#524388',
+        color: '#524388'
+    })
     window.location.href = "./home.html"
 }

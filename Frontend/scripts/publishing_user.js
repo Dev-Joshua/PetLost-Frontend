@@ -54,10 +54,11 @@ function deleteAdd(id) {
     text: "No podra revertir este proceso!",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonColor: '#3085d6',
+    confirmButtonColor: '#524388',
     cancelButtonColor: '#d33',
     confirmButtonText: 'Si',
-    cancelButtonText: 'No'
+    cancelButtonText: 'No',
+    color: '#524388'
   }).then(async (result) => {
     if (result.isConfirmed) {
       const request_del = await fetch(URL_API + "mascotas/del/" + id, {
@@ -67,9 +68,12 @@ function deleteAdd(id) {
           'Content-Type': 'application/json'
         }
       })
-      await Swal.fire(
-        'Mascota eliminada con éxito!',
-      )
+      await Swal.fire({
+        icon: 'success',
+        title: 'Mascota eliminada con éxito!',
+        confirmButtonColor: '#524388',
+        color: '#524388'
+      })
       location.reload();
     }
   })

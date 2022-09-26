@@ -1,11 +1,11 @@
 const URL_API = "http://localhost:8080/"
-async function registerUser(evt){
+async function registerUser(evt) {
     evt.preventDefault();
     //Creo una lista y le meto los valores que hay en el input para nombre y apellido (TABLA PERSONA)
     let data_person = {};
     data_person.names = document.getElementById("name_input").value;
     data_person.lastnames = document.getElementById("lastname_input").value;
-    
+
     //Hago una petición POST al back para que guarde esa info en la tabla personas de la BD
     const request_person = await fetch(URL_API + "personas/add", {
         method: 'POST',
@@ -27,7 +27,7 @@ async function registerUser(evt){
     data_contact.address = document.getElementById("address_input").value;
 
     //Petición POST para que guarde la info en la tabla contactos de la BD
-    const request_contact = await fetch(URL_API+'contactos/add', {
+    const request_contact = await fetch(URL_API + 'contactos/add', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -44,11 +44,18 @@ async function registerUser(evt){
     let repeat_pass = document.getElementById("repeat_pass_input").value;
 
     //Verifica que las dos contraseñas sean iguales
-    if(data_user.password != repeat_pass){
-        alert("La contraseña es diferenre");
+    if (data_user.password != repeat_pass) {
+        Swal.fire({
+            icon: 'error',
+            text: 'Repita la misma contraseña!',
+            title: 'Ooops... Las contraseñas son diferentes',
+            confirmButtonText: 'Entendido?!',
+            confirmButtonColor: '#524388',
+            color: '#524388'
+        })
         return;
     }
-    
+
     //Hace petición POST para crear el Usuario
     const request_user = await fetch(URL_API + 'usuarios/add', {
         method: 'POST',
@@ -59,8 +66,11 @@ async function registerUser(evt){
         body: JSON.stringify(data_user)
     });
 
-    await Swal.fire('Usuario registrado con éxito')
-    window.location.href="../index.html"
-
-    
+    await Swal.fire({
+        icon: 'success',
+        title: 'Usuario registrado con éxito',
+        confirmButtonColor: '#524388',
+        color: '#524388'
+    })
+    window.location.href = "../index.html"
 }

@@ -61,11 +61,12 @@ async function updateInfo() {
         updatePerson();
         updateContact();
         updateUser();
-        Swal.fire({
+        await Swal.fire({
             icon: 'success',
             title: 'Persona actualizada con éxito',
             showConfirmButton: false,
-            timer: 2000
+            timer: 1500,
+            color: '#524388'
         })
         // alert("Persona actualizada con éxito")
         window.location.href = "home.html";

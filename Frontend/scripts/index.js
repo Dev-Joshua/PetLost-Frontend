@@ -34,11 +34,13 @@ async function login(evt) {
         localStorage.setItem("id", id_person)
         localStorage.setItem("namePerson", name_person)
         window.location.href = "./html/home.html"
-        
+
     } else {
         Swal.fire({
             icon: 'error',
             title: 'Usuario y/o contraseña incorrecto',
+            confirmButtonColor: '#524388',
+            color: '#524388'
         })
     }
 }
@@ -57,8 +59,8 @@ function showHide() {
     }
 }
 
-async function savePersonInSession(id){
-    const person_request = await fetch("http://localhost:8080/personas/"+id,{
+async function savePersonInSession(id) {
+    const person_request = await fetch("http://localhost:8080/personas/" + id, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
