@@ -1,5 +1,6 @@
 const URL_API = "http://localhost:8080/mascotas"
 $(document).ready(function () {
+  document.getElementsByClassName("profile-name")[0].innerHTML = localStorage.getItem("namePerson")
   showPets();
   
 });

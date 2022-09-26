@@ -1,4 +1,5 @@
 URL_API = "http://localhost:8080/mascotas/add"
+document.getElementsByClassName("profile-name")[0].innerHTML = localStorage.getItem("namePerson")
 async function createPet(evt) {
     evt.preventDefault();
     const form = evt.target;
