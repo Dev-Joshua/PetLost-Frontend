@@ -5,7 +5,7 @@
 <h1 align=center> WEB para encontrar mascotas perdidas </h1>
 
 
-<img src="./Frontend/assets/icon/logo.png" alt="Logo">
+<img src="./Frontend/assets/logos/logo2.png" alt="Logo">
 
 <h1 align=center> 🛠 Technologies </h1>
 <hr/>
