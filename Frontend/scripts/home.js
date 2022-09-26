@@ -2,7 +2,7 @@ const URL_API = "http://localhost:8080/mascotas"
 $(document).ready(function () {
   document.getElementsByClassName("profile-name")[0].innerHTML = localStorage.getItem("namePerson")
   showPets();
-  
+
 });
 
 async function showPets() {
@@ -28,13 +28,13 @@ async function showPets() {
       <table>
         <tbody>
           <tr>
-            <td>${element.placeLost}</td>
+            <td>Lugar de pérdida: ${element.placeLost}</td>
           </tr>
           <tr>
-            <td>Fehca de perdida: ${(element.dateLost).slice(0,10).replaceAll("-","/")}</td>
+            <td>Fecha de pérdida: ${(element.dateLost).slice(0, 10).replaceAll("-", "/")}</td>
           </tr>
           <tr>
-            <td>Descripcion: ${element.details}</tr>
+            <td>Descripción: ${element.details}</tr>
           <hr />
         </tbody>
       </table>
@@ -64,12 +64,12 @@ async function showPets() {
   const close = document.getElementsByClassName('icon-closed');
 
   for (let index = 0; index < contactar.length; index++) {
-      contactar[index].addEventListener('click', () => {
-          contactar[index].nextElementSibling.classList.add('show')
-      })
+    contactar[index].addEventListener('click', () => {
+      contactar[index].nextElementSibling.classList.add('show')
+    })
 
-      close[index].addEventListener('click', () => {
-          close[index].parentElement.parentElement.classList.remove('show')
-      })   
-  } 
+    close[index].addEventListener('click', () => {
+      close[index].parentElement.parentElement.classList.remove('show')
+    })
+  }
 }
