@@ -249,7 +249,7 @@ button:hover,
     display: none;
   }
   .nav {
-    margin: 0px;
+    margin-right: 20px;
   }
 
   .profile-image {
@@ -259,7 +259,7 @@ button:hover,
   .container-account ul {
     display: block;
     place-content: space-between;
-    margin: 0px 0px 0px -15px;
+    margin: 0px;
     border-radius: 5px;
     width: 210px;
     padding: 5px;
