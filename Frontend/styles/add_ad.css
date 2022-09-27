@@ -381,7 +381,7 @@ textarea {
     display: none;
   }
   .nav {
-    margin: 0px 50px 0px 50px;
+    margin-right: 20px;
   }
 
   .profile-image {
@@ -391,14 +391,14 @@ textarea {
   .container-account ul {
     display: block;
     place-content: space-between;
-    margin: 0px 0px 0px -50px;
+    margin: 0px;
     border-radius: 5px;
     width: 210px;
     padding: 5px;
   }
   .container-account ul li {
     margin-top: 40px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
   .container-account ul li a:hover {
@@ -440,9 +440,11 @@ textarea {
 @media (max-width: 600px) {
   .container-list ul {
     justify-content: flex-end;
+    margin-right: 20px;
   }
   .container-list ul li {
     margin-left: 20px;
+    margin-top: 20px;
   }
   .container-list ul li a{
     font-size: 20px;
@@ -452,11 +454,12 @@ textarea {
     padding: 5px;
   }
   .container-account ul li {
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 50px;
   }
   #menu {
-    font-size: 40px;
-    top: 30px;
+    font-size: 30px;
+    top: 40px;
   }
   form {
     width: 400px;
