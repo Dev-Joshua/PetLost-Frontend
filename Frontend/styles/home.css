@@ -503,12 +503,12 @@ button:hover {
     place-content: space-between;
     margin: 0px;
     border-radius: 5px;
-    padding: 40px;
-    width: 250px;
+    width: 210px;
+    padding: 5px;
   }
   .container-account ul li {
     margin-top: 40px;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
   }
   .container-account ul li a:hover {
@@ -525,12 +525,12 @@ button:hover {
 
   #menu {
     display: block;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     /* border: 3px solid var(--label); */
     position: absolute;
     left: 10px;
-    top: 20px;
+    top: 25px;
     z-index: 9999;
     cursor: pointer;
   }
@@ -560,7 +560,11 @@ button:hover {
   }
   .container-account ul {
     width: 220px;
-    padding: 15px;
+    padding: 5px;
+  }
+  .container-account ul li {
+    font-size: 16px;
+    margin-top: 50px;
   }
   .container-account li a {
     font-size: 20px;
@@ -587,7 +591,7 @@ button:hover {
     justify-content: center;
   }
   #menu {
-    font-size: 40px;
-    top: 30px;
+    font-size: 30px;
+    top: 40px;
   }
 }
