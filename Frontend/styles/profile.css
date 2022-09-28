@@ -130,7 +130,7 @@ header img {
 .card-info {
   background: linear-gradient(0deg, rgb(0 0 0 / 74%), rgb(98 97 103 / 85%));
   border-radius: 10px;
-  width: 60%;
+  width: 650px;
   display: flex;
   flex-direction: column;
 }
