@@ -59,12 +59,16 @@
   </header>
   <main>
     <section class="filtro-add">
-      <div class="order-container">
+      <div class="order-container" style="display: flex;">
         <label for="order">Ordenar:</label>
         <select name="orderList" id="select">
+          <option value="todos" selected>Todos</option>
+          <option value="gatos" >Gatos</option>
           <option value="perros">Perros</option>
-          <option value="gatos">Gatos</option>
         </select>
+        <div class="button-filter-container">
+          <button class="button-filter" onclick="filter()">Filtrar</button>
+        </div>
       </div>
       <div class="ad-container">
         <a href="../html/add_ad.html">

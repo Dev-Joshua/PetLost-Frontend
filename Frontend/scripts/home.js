@@ -1,24 +1,49 @@
 const URL_API = "http://localhost:8080/mascotas"
+const container = document.getElementById("cards-ads")
+
 $(document).ready(function () {
   document.getElementsByClassName("profile-name")[0].innerHTML = localStorage.getItem("namePerson")
   showPets();
-
 });
 
 async function showPets() {
-  const request_pets = await fetch(URL_API, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  });
+  let id_pet = document.getElementById("select").selectedIndex
+  if(id_pet == 0){ 
+    var request_pets = await fetch(URL_API, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+  }
+
+  if(id_pet == 1){  
+    var request_pets = await fetch(URL_API+"/kind/"+id_pet, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+  }
+
+  if(id_pet == 2){
+    var request_pets = await fetch(URL_API+"/kind/"+id_pet, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+  }
+
+  
 
   const pets = await request_pets.json();
 
-  const container = document.getElementById("cards-ads")
   console.log(container)
-
+  
   pets.forEach(element => {
     container.innerHTML += `
     <article class="card-pet">
@@ -72,4 +97,9 @@ async function showPets() {
       close[index].parentElement.parentElement.classList.remove('show')
     })
   }
+}
+
+function filter(){
+  container.innerHTML = ``
+  showPets()
 }
